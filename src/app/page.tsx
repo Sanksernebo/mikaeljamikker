@@ -1,101 +1,82 @@
-import Image from "next/image";
+import React from 'react';
+import styles from '../styles/page.module.css';
+import { FaInstagram, FaSpotify, FaYoutube } from 'react-icons/fa';
 
-export default function Home() {
+
+const HomePage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={styles.container}>
+      {/* Header Section */}
+      <header className={styles.header}>
+        <p className={styles.subtitle}>Jaga meiega oma lugu, küsimust, mure, probleemi, dilemmat. Kuulame selle saates üle ja leiame koos sellele vastused.</p>
+        <p className={styles.subtitle}>Mikael saab kokku sõpradega ja ajab juttu. Lahendatud saavad ka kõik kuulajate mured, probleemid, müsteeriumid ja lood.</p>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+      {/* Instructions Section */}
+      <section className={styles.instructions}>
+        <h2 className={styles.instructionSectionTitle}>Kuidas saata oma salvestust?</h2>
+        <ul className={styles.instructionList}>
+          <li>Vajuta allpool olevat nuppu "Jäta sõnum".</li>
+          <li>Salvesta oma lugu.</li>
+          <li>Saada oma sõnum ja looda, et see jõuab podcasti!</li>
+        </ul>
+      </section>
+
+      {/* SpeakPipe Widget Section */}
+      <section className={styles.widgetSection}>
+        <h2 className={styles.sectionTitle}>Saada oma sõnum!</h2>
+        <p className={styles.widgetDescription}>
+          Kasuta SpeakPipe vidinat, et saata oma sõnum podcasti postkasti.
+        </p>
+        {/* Embed SpeakPipe Widget */}
+        <iframe
+          src="https://www.speakpipe.com/widget/inline/o624ok6qmiaqj375qkpw6ilywqo02e9s"
+          allow="microphone" 
+          width="100%"
+          height="200"
+          className={styles.widgetIframe}
+        ></iframe>
+        <script async src="https://www.speakpipe.com/widget/loader.js"></script>
+      </section>
+
+      {/* Previous Episode Section */}
+      <section className={styles.videoSection}>
+        <h2 className={styles.sectionTitle}>Eelmine episood</h2>
+        <div className={styles.videoContainer}>
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/8NGZvY1muss?si=WIaCcRhmJTsQcZOu"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </section>
+
+      {/* Social Media Links Section */}
+      <section className={styles.socialMediaSection}>
+        <h2 className={styles.sectionTitle}>Leia podcast ka siit!</h2>
+        <div className={styles.socialMediaLinks}>
+          <a href="https://open.spotify.com/show/5ucZpdw230SJCQilS3yJ8H" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+            <FaSpotify size={30} className={styles.icon} /> Spotify
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          <a href="https://www.youtube.com/@MikaelJaMikker" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+            <FaYoutube size={30} className={styles.icon} /> YouTube
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Footer Section */}
+      <footer className={styles.footer}>
+        <p>&copy; {new Date().getFullYear()} OÜ Meemandus. Kõik õigused kaitstud.</p>
+        <p className={styles.socialMediaLinks}>
+        <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+          <FaInstagram size={30} className={styles.icon} /> Instagram</a>
+        </p>
       </footer>
     </div>
   );
-}
+};
+
+export default HomePage;

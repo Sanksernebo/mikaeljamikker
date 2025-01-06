@@ -1,0 +1,135 @@
+.container {
+    background-image: url('../../public/mikaeljamikker_art.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 0px;
+    background-color: rgb(50 38 72);
+    color: #1f2937;
+  }
+  
+  .header {
+    text-align: center;
+    margin-top: 500px;
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #fff;
+  }
+
+  .videoSection {
+    margin-bottom: 40px;
+  }
+
+  .sectionTitle {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .videoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 450px;
+    height: auto;
+    background-color: #f9fafb;
+  }
+  
+  .videoContainer iframe {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .instructions {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, rgb(201 106 64), rgb(63 47 75));
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  .instructionSectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  .instructionList {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #fff;
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .widgetSection {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .widgetDescription {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .widgetIframe {
+    max-width: 500px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+  
+  .socialMediaSection {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .socialMediaLinks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .socialLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .icon {
+    margin-right: 8px;
+    color: #fff;
+  }
+  
+  .footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #fff;
+  }
