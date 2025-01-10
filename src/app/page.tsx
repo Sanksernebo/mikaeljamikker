@@ -10,13 +10,14 @@ const HomePage = () => {
       <header className={styles.header}>
         <p className={styles.subtitle}>Jaga meiega oma lugu, küsimust, mure, probleemi, dilemmat. Kuulame selle saates üle ja leiame koos sellele vastused.</p>
         <p className={styles.subtitle}>Mikael saab kokku sõpradega ja ajab juttu. Lahendatud saavad ka kõik kuulajate mured, probleemid, müsteeriumid ja lood.</p>
+        <p className={styles.subtitle}>Heliklipi edastamisega annad meile nõusoleku selle esitamiseks ja muul viisil meelelahutuslikel eesmärkidel kasutamiseks podcastis “Mikael ja Mikker”.</p>
       </header>
 
       {/* Instructions Section */}
       <section className={styles.instructions}>
         <h2 className={styles.instructionSectionTitle}>Kuidas saata oma salvestust?</h2>
         <ul className={styles.instructionList}>
-          <li>Vajuta allpool olevat nuppu "Jäta sõnum".</li>
+          <li>Vajuta allpool olevat nuppu &quot;Start Recording&quot;.</li>
           <li>Salvesta oma lugu.</li>
           <li>Saada oma sõnum ja looda, et see jõuab podcasti!</li>
         </ul>
