@@ -1,0 +1,11 @@
+{
+    "name": "podcast-page-meema",
+    "script": "npm",
+    "args": "start",
+    "cwd": "/data01/virt129379/domeenid/www.digiarendus.ee/mikaeljamikker/",
+    "env": {
+      "NODE_ENV": "production",
+      "PORT": "8080"
+    }
+  }
+  

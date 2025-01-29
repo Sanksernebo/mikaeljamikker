@@ -1,135 +1,262 @@
-.container {
-    background-image: url('../../public/mikaeljamikker_art.jpg');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: contain;
-    min-height: 100vh;
-    font-family: 'Nunito', sans-serif;
-    margin: 0 auto;
-    padding: 20px;
-    padding-bottom: 0px;
-    background-color: rgb(50 38 72);
-    color: #1f2937;
-  }
-  
-  .header {
-    text-align: center;
-    margin-top: 500px;
-    margin-bottom: 40px;
-  }
-  
-  .title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0;
-    color: #000;
-  }
-  
-  .subtitle {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    color: #fff;
+/* Wrapper for Unified Background */
+.fullPageWrapper {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(to bottom, #322648, #1f2937);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Ensure it doesn't interfere with fixed positioning */
+  overflow: visible; /* Make sure no content hides the side text */
+}
+
+/* Side Text Containers - Always visible and on the sides */
+.sideTextLeftContainer, .sideTextRightContainer {
+  position: fixed;
+  top: 50%; /* Adjust the text position to start after the image section */
+  left: 0;
+  width: 30px; /* Half the screen width for the left text */
+  height: auto; /* Full height of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Prevent interaction blocking */
+  z-index: 998; /* Ensure it's on top of all content */
+  transform: translateY(-50%); /* Smooth transition if we change the top */
+}
+
+/* Right side container, positioned to the right */
+.sideTextRightContainer {
+  left: 98%; /* Start the right container at the middle of the screen */
+}
+
+/* Text styling */
+.sideTextLeft,
+.sideTextRight {
+  writing-mode: vertical-lr;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fbbf24;
+  position: relative;
+  z-index: 2; /* Ensure side text stays on top of content */
+}
+
+/* Side Text Adjustments */
+.sideTextLeft {
+  padding-left: 20px;
+}
+
+.sideTextRight {
+  padding-right: 20px;
+}
+
+
+/* Full-screen image section */
+.imageSection {
+  position: relative;
+  width: auto;
+  height: 100dvh; /* Full height for the first section */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  z-index:999;
+}
+
+/* Button Styling */
+.scrollButton {
+  background-color: rgb(156 81 67 0.7);
+  color: #fff;
+  font-size: 2rem;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.scrollButton:hover {
+  transform: translateX(-50%) scale(1.1);
+  background-color: rgb(156, 81, 67);
+  border-color: #fbbf24;
+  color: #fff;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+
+/* Second section */
+.secondSection {
+  display: flex;
+  position:relative;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+
+.content {
+  flex: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 20px 0;
+  z-index: 1;
+}
+.videoSection {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 450px;
+  aspect-ratio: 16/9;
+  height: auto;
+  background-color: #f9fafb;
+}
+
+.videoContainer iframe {
+  width: 100%;
+  height: 250px;
+}
+
+.instructions {
+  margin-bottom: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, rgb(201 106 64), rgb(63 47 75));
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.instructionSectionTitle {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.instructionList {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #fff;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.widgetSection {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.widgetDescription {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.widgetIframe {
+  max-width: 500px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.socialMediaSection {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.socialMediaLinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #fff;
+}
+
+.footer {
+  background: linear-gradient(to bottom, #322648, #1f2937);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+  margin-top: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #fff;
+}
+
+@media (max-width: 600px) {
+
+  .sideTextLeftContainer, .sideTextRightContainer {
+    display: none;
   }
 
-  .videoSection {
-    margin-bottom: 40px;
+  .scrollButton {
+    bottom: 60px;
   }
 
-  .sectionTitle {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #fff;
-  }
-
-  .videoContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    max-width: 450px;
-    height: auto;
-    background-color: #f9fafb;
-  }
-  
-  .videoContainer iframe {
-    width: 100%;
-    height: 250px;
-  }
-  
-  .instructions {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-image: linear-gradient(to bottom right, rgb(201 106 64), rgb(63 47 75));
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  }
-  
-  .instructionSectionTitle {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #fff;
-  }
-  
-  .instructionList {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #fff;
-    padding-left: 20px;
-    list-style-type: disc;
-  }
-  
-  .widgetSection {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .widgetDescription {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    color: #fff;
-  }
-  
   .widgetIframe {
-    max-width: 500px;
+    width: 90%;
+    max-width: 100%;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     margin: 0 auto;
   }
-  
-  .socialMediaSection {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .socialMediaLinks {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .socialLink {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-  }
 
-  .icon {
-    margin-right: 8px;
-    color: #fff;
+  .videoContainer {
+    width: 90%;
+    height: auto;
   }
-  
-  .footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #fff;
-    margin-top: 20px;
-    padding: 20px 0;
-    border-top: 1px solid #fff;
-  }
+}
