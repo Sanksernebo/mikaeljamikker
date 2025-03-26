@@ -16,19 +16,20 @@ const HomePage = () => {
     <div className={styles.fullPageWrapper}>
       {/* Full-screen image section */}
       <section className={styles.imageSection}>
-        <div className={styles.imageWrapper}>
-          <Image
-            src={"/mikaeljamikker_art.svg"}
-            alt="Mikael ja Miker"
-            className={styles.image}
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-        </div>
-        <button onClick={scrollToSection} className={styles.scrollButton}>
-          <FaCaretDown size={30} className="icon" />
-        </button>
-      </section>
+    <div className={styles.imageWrapper}>
+      <Image
+        src="/mikaeljamikker_art.svg"
+        alt="Mikael ja Mikker"
+        width={1200}
+        height={1200}
+        priority
+        className={styles.image}
+      />
+    </div>
+    <button onClick={scrollToSection} className={styles.scrollButton}>
+      <FaCaretDown size={30} />
+    </button>
+  </section>
 
       {/* Side Text Containers */}
       <div className={styles.sideTextLeftContainer}>
