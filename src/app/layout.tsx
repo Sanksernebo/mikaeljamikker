@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const nunitoSans = Nunito({
@@ -21,10 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${nunitoSans.variable} antialiased`}
-      >
+      <html lang="en">
+        <body className={`${nunitoSans.variable} antialiased`}>
+        <GoogleAnalytics gaId="G-N129FRG3M5" />
         {children}
       </body>
     </html>

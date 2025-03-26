@@ -115,7 +115,7 @@ const HomePage = () => {
   </footer>
 </div>
 </div>
-  );
+  )
 };
 
 export default HomePage;
