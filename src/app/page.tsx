@@ -26,7 +26,10 @@ const HomePage = () => {
         className={styles.image}
       />
     </div>
-    <button onClick={scrollToSection} className={styles.scrollButton}>
+    <button
+      onClick={scrollToSection} 
+      className={styles.scrollButton}
+      aria-label="Scroll down">
       <FaCaretDown size={30} />
     </button>
   </section>
@@ -88,7 +91,7 @@ const HomePage = () => {
         width="100%"
         height="315"
         src="https://www.youtube.com/embed?listType=playlist&list=UUulDnsEktKw8uMVphLqWYVQ"
-        title="YouTube video player"
+        title="Previous episode - YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
@@ -111,7 +114,7 @@ const HomePage = () => {
   {/* Footer Section */}
   <footer className={styles.footer}>
     <p>&copy; {new Date().getFullYear()} Mikael Meema - Kõik õigused kaitstud
-      | Veebilehe tegi: <a href="mailto:info@digiarendus.ee"> info@digiarendus.ee</a>
+      | Veebilehe tegi: <br /> <a className={styles.footerMail} href="mailto:info@digiarendus.ee"> info@digiarendus.ee</a>
     </p>
   </footer>
 </div>
