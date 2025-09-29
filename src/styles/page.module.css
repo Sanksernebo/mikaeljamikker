@@ -228,6 +228,10 @@
   border-top: 1px solid #fff;
 }
 
+.footerMail {
+  color: #fff;
+}
+
 @media (max-width: 600px) {
 
   .imageSection {
@@ -252,6 +256,10 @@
     display: none;
     bottom: 5%;
   }
+
+  .instructions {
+  margin: 20px;
+}
 
   .widgetIframe {
     width: 90%;
