@@ -27,7 +27,7 @@
 
 /* Right side container, positioned to the right */
 .sideTextRightContainer {
-  left: 98%;
+  left: 97%;
 }
 
 /* Text styling */
@@ -111,7 +111,7 @@
   padding: 0 20px;
 }
 
-.content h2 {
+.content h1 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
