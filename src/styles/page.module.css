@@ -27,7 +27,7 @@
 
 /* Right side container, positioned to the right */
 .sideTextRightContainer {
-  left: 98%;
+  left: 97%;
 }
 
 /* Text styling */
@@ -74,7 +74,7 @@
 
 /* Button Styling */
 .scrollButton {
-  background-color: rgb(156 81 67 0.7);
+  background-color: rgb(156, 81, 67, 0.7);
   color: #fff;
   font-size: 2rem;
   padding: 20px;
@@ -111,7 +111,7 @@
   padding: 0 20px;
 }
 
-.content h2 {
+.content h1 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
