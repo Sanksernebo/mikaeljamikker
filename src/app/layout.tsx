@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Head from "next/head";
 import { Nunito } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
@@ -10,21 +9,21 @@ const nunitoSans = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Mikael ja Mikker",
-  description: "Koduleht Mikael ja Mikker podcastile",
+  title: "Mikael ja Mikker - kodumaine podcast",
+  description: "Mikael Meema podcast, kus kuulajate häälsõnumitena saadetud lood ja küsimused saavad vastused. Kuula uusimaid episoode Spotify’s ja YouTube’is",
   icons: {
     icon: '/favicon.ico'
   },
   openGraph: {
-    title: "Mikael ja Mikker Podcast",
-    description: "Eesti podcast, kus kuulajate lood ja küsimused saavad vastused. Kuula uusimaid episoode Spotify’s ja YouTube’is.",
+    title: "Mikael ja Mikker - kodumaine podcast",
+    description: "Mikael Meema podcast, kus kuulajate häälsõnumitena saadetud lood ja küsimused saavad vastused. Kuula uusimaid episoode Spotify’s ja YouTube’is",
     url: "https://www.mikaeljamikker.ee",
     siteName: "Mikael ja Mikker",
     images: [
       {
-        url: "/mikaeljamikker_art.svg",
+        url: "https://www.mikaeljamikker.ee/mikaeljamikker_art.svg",
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: "Mikael ja Mikker Podcast illustratsioon",
       },
     ],
@@ -32,10 +31,19 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mikael ja Mikker Podcast",
+    title: "Mikael ja Mikker - kodumaine podcast",
     description: "Kuula Mikael ja Mikker podcasti.",
-    images: ["/mikaeljamikker_art.svg"],
-  }
+    images: ["https://www.mikaeljamikker.ee/mikaeljamikker_art.svg"],
+  },
+  keywords: [
+    "Mikael ja Mikker",
+    "Eesti podcast",
+    "kuulajate lood",
+    "dilemmad",
+    "küsimused",
+    "Spotify",
+    "YouTube",
+  ],  
 };
 
 export default function RootLayout({
@@ -44,14 +52,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en">
+      <html lang="et">
         <body className={`${nunitoSans.variable} antialiased`}>
-          <Head>
-          <meta
-            name="keywords"
-            content="Mikael ja Mikker, Eesti podcast, kuulajate lood, dilemmad, küsimused, Spotify, YouTube"
-          />
-        </Head>
         <GoogleAnalytics gaId="G-N129FRG3M5" />
 
         {/* Schema.org JSON-LD for Podcast */}
@@ -59,13 +61,26 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
+              "@id": "https://www.mikaeljamikker.ee/#podcast",
               "@context": "https://schema.org",
               "@type": "PodcastSeries",
               "name": "Mikael ja Mikker Podcast",
               "url": "https://www.mikaeljamikker.ee",
               "description": "Kuula Mikael ja Mikker podcasti, kus kuulajate lood ja küsimused saavad vastused.",
               "image": "https://www.mikaeljamikker.ee/mikaeljamikker_art.svg",
-              "keywords": ["Mikael ja Mikker", "Eesti podcast", "kuulajate lood", "dilemmad", "Spotify", "YouTube"]
+              "keywords": ["Mikael ja Mikker", "Eesti podcast", "kuulajate lood", "dilemmad", "Spotify", "YouTube"],
+              "creator":{
+              "@type": "Person", "name": "Mikael Meema" },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Mikael ja Mikker",
+                "url": "https://www.mikaeljamikker.ee"
+              },
+              "sameAs": [
+                "https://www.youtube.com/@MikaelJaMikker",
+                "https://open.spotify.com/show/5ucZpdw230SJCQilS3yJ8H",
+                "https://www.instagram.com/mikaeljamikker/"
+              ]
             }),
           }}
         />
