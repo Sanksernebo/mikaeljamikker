@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Mikael ja Mikker",
     images: [
       {
-        url: "https://www.mikaeljamikker.ee/mikaeljamikker_art.svg",
+        url: "https://www.mikaeljamikker.ee/mikaeljamikker_art.jpg",
         width: 1200,
         height: 630,
         alt: "Mikael ja Mikker Podcast illustratsioon",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mikael ja Mikker - kodumaine podcast",
     description: "Kuula Mikael ja Mikker podcasti.",
-    images: ["https://www.mikaeljamikker.ee/mikaeljamikker_art.svg"],
+    images: ["https://www.mikaeljamikker.ee/mikaeljamikker_art.jpg"],
   },
   keywords: [
     "Mikael ja Mikker",
@@ -67,7 +67,7 @@ export default function RootLayout({
               "name": "Mikael ja Mikker Podcast",
               "url": "https://www.mikaeljamikker.ee",
               "description": "Kuula Mikael ja Mikker podcasti, kus kuulajate lood ja küsimused saavad vastused.",
-              "image": "https://www.mikaeljamikker.ee/mikaeljamikker_art.svg",
+              "image": "https://www.mikaeljamikker.ee/mikaeljamikker_art.jpg",
               "keywords": ["Mikael ja Mikker", "Eesti podcast", "kuulajate lood", "dilemmad", "Spotify", "YouTube"],
               "creator":{
               "@type": "Person", "name": "Mikael Meema" },
