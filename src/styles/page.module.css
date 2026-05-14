@@ -10,24 +10,23 @@
   overflow: visible;
 }
 
-/* Side Text Containers - Always visible and on the sides */
+/* Side Text Containers - scroll with the page, anchored below the hero */
 .sideTextLeftContainer, .sideTextRightContainer {
-  position: fixed;
-  top: 50%; /* Adjust the text position to start after the image section */
+  position: absolute;
+  top: 100vh;
+  bottom: 0;
   left: 0;
-  width: 30px; /* Half the screen width for the left text */
-  height: auto; /* Full height of the screen */
+  width: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  z-index: 998; /* Ensure it's under hero content */
-  transform: translateY(-50%); /* Smooth transition if we change the top */
 }
 
-/* Right side container, positioned to the right */
+/* Right side container */
 .sideTextRightContainer {
-  left: 97%;
+  left: unset;
+  right: 0;
 }
 
 /* Text styling */
@@ -51,7 +50,6 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  z-index: 999; /* Above the side text (998) */
   overflow: hidden;
   display: flex;
   flex-direction: column;

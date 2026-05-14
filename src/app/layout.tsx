@@ -54,7 +54,9 @@ export default function RootLayout({
   return (
       <html lang="et">
         <body className={`${nunitoSans.variable} antialiased`}>
-        <GoogleAnalytics gaId="G-N129FRG3M5" />
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
 
         {/* Schema.org JSON-LD for Podcast */}
         <script
